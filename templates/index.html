@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Latest News</h2>
+    {% for post in posts %}
+        <article>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <small>{{ post.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+        </article>
+    {% endfor %}
+{% endblock %}
